@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" 
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+<style>
+    *
+    {
+        padding: 0;
+        margin:0;
+
+    }
+    .container
+    {
+        position: relative;
+        background:url(PERSON.avif) right no-repeat;
+        width:100%;
+        height:100vh;
+        background-size: cover;
+    }
+    .container .sidebar
+    {
+        height:100vh;
+        width:280px;
+        left: -280px;
+        position: fixed;
+        background: rgba(255, 255, 255, 0.1);
+        box-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
+    }
+    .sidebar .logo
+    {
+        position:absolute;
+        width:100%;
+        height:60px;
+        box-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
+
+    }
+    .sidebar .logo a{
+       color:white;
+       font-size: 25px;
+       font-weight: bold;
+       line-height: 60px;
+       text-decoration: none;
+       position: absolute;
+       left: 50px;
+
+    }
+    .sidebar .menu
+    {
+        position: absolute;
+        top: 80px;
+        width: 100%;
+    }
+    .sidebar .menu li
+    {
+        margin-top: 6px;
+        padding: 14px 20px;
+    }
+    .sidebar .menu i 
+    {
+        color: white;
+        font-size: 20px;
+        padding-right: 8px;
+    }
+    .sidebar .menu a{
+        color: white;
+        font-size: 20px;
+        text-decoration: none;
+    }
+    .sidebar .menu li:hover{
+        border: 1px solid white;
+        transition: all 0.3s linear;
+        box-shadow: 0 0 4px rgba(255, 255, 255, 0.5);
+    }
+    .sidebar .sns
+    {
+        position: absolute;
+        transform: translateX(50%);
+        cursor: pointer;
+        bottom: 20px;
+    }
+    .sns i{
+        padding: 0 5px;
+        color: rgb(224, 219, 219);
+        font-size: 20px;
+        opacity: 0.7;
+        transition: all 0.2s linear;
+
+    }
+    .sns i:hover{
+         opacity:1;
+         
+    }
+    #check{
+        display: none;
+    }
+    .container .button i
+    {
+        color: white;
+        font-size: 30px;
+        font-weight: 700;
+        position: absolute;
+        line-height: 60px;
+        left: 16px;
+        cursor: pointer;
+        opacity: 1;
+        transition: all 0.3s linear;
+    }
+    .sidebar .button2 i{
+        font-size: 25px;
+        line-height: 60px;
+        position: absolute;
+        left: 240px;
+        cursor: pointer;
+        transition: all 0.3s linear;
+        opacity: 0;
+    }
+    .button i:hover{
+        font-size: 29px;
+    }
+    .button2 i:hover{
+        font-size: 24px;
+    }
+    #check:checked ~.sidebar{
+        left: 0px;
+    }
+    #check:checked ~.button i{
+        opacity: 0;
+    }
+    #check:checked ~ .sidebar .button2 i{
+        opacity: 1;
+    }
+    
+</style>
+<body>
+    
+    <div class="container">
+        <input type="checkbox" id="check">
+        <div class="button">
+        <label for ="check">
+            <i class="fas fa-bars"></i>
+        </label>
+        </div>
+        <div class="sidebar">
+         <div class="logo">
+            <a href="#">CodingLab</a>
+         </div>
+         <div class="button2">
+            <label for="check">
+                <i class="fas fa-times"></i>
+            </label>
+         </div>
+         
+         <div class="menu">
+         <ul>
+            <li><a href="#"><i class="fas fa-qrcode"></i>Dashboard</a></li>
+            <li><a href="#"><i class="fas fa-link"></i>Shortcuts</a></li>
+            <li><a href="#"><i class="fas fa-stream"></i>Overview</a></li>
+            <li><a href="#"><i class="fas fa-calendar-week"></i>Events</a></li>
+            <li><a href="#"><i class="fas fa-question-circle"></i>About</a></li>
+            <li><a href="#"><i class="fas fa-sliders-h"></i>Services</a></li>
+            <li><a href="#"><i class="fas fa-phone-volume"></i>Contact</a></li>
+            <li><a href="#"><i class="fas fa-comments"></i>Feedback</a></li>
+         </ul>
+         </div>
+         <div class="sns">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+
+         </div>
+        </div>
+        
+    </div>
+</body>
+</html>
